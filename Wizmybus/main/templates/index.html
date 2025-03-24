@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wizmybus - KSRTC Bus Tracker</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+    <script defer type="module" src="{% static 'script.js' %}"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+  </head>
+  <body>
+    <div class="main-container">
+      <aside class="primary-sidebar">
+        <div class="logo">
+          <h1>Wizmybus</h1>
+        </div>
+        <nav>
+          <ul>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <aside class="secondary-sidebar">
+        <form id="searchForm">
+          <h2>Search Bus Routes</h2>
+          <input type="text" id="fromId" placeholder="From" required />
+          <input type="text" id="toId" placeholder="To" required />
+          <button type="submit">Search</button>
+        </form>
+        <div style="height: 100vh; overflow-y: scroll " id="busList" class="bus-list"></div>
+      </aside>
+
+      <div style="max-height: 100vh;" id="map" class="main-content"></div>
+    </div>
+  </body>
+</html>

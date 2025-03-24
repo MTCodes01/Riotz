@@ -1,0 +1,327 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  :root {
+    --primary-color: #0056b3;
+    --secondary-color: #f8f9fa;
+    --accent-color: #ff6b35;
+    --text-color: #333333;
+    --light-text: #ffffff;
+    --border-color: #e0e0e0;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+  }
+  
+  body {
+    background-color: #f4f7f9;
+    color: var(--text-color);
+    line-height: 1.6;
+    height: 100vh;
+    overflow-y: hidden  ;
+  }
+  
+  /* Layout */
+  .main-container {
+    display: grid;
+    grid-template-columns: 220px 300px 1fr;
+    min-height: 100vh;
+  }
+  
+  /* Primary Sidebar */
+  .primary-sidebar {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 20px 0;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    height: 100vh;
+  }
+  
+  .logo {
+    padding: 0 20px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .logo h1 {
+    font-size: 24px;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin-top: 20px;
+  }
+  
+  nav ul li {
+    padding: 10px 20px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  nav ul li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  nav ul li.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-left: 4px solid var(--accent-color);
+  }
+  
+  nav ul li a {
+    color: var(--light-text);
+    text-decoration: none;
+    display: block;
+    font-weight: 500;
+  }
+  
+  /* Secondary Sidebar */
+  .secondary-sidebar {
+    background-color: var(--secondary-color);
+    border-right: 1px solid var(--border-color);
+    padding: 20px;
+    overflow-y: scroll;
+    max-height: 100vh;
+  }
+  
+  #searchForm {
+    background-color: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+  }
+  
+  #searchForm h2 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: var(--primary-color);
+  }
+  
+  #searchForm input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    transition: border-color 0.3s;
+  }
+  
+  #searchForm input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(0, 86, 179, 0.1);
+  }
+  
+  #searchForm button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+  }
+  
+  #searchForm button:hover {
+    background-color: #004494;
+  }
+  
+  /* Bus List */
+  .bus-list {
+    margin-top: 20px;
+  }
+  
+  .bus-item {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .bus-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bus-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+  
+  .bus-item p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .bus-item .time {
+    color: var(--accent-color);
+    font-weight: 600;
+  }
+  
+  .bus-item .price {
+    color: #28a745;
+    font-weight: 600;
+  }
+  
+  /* Main Content */
+  .main-content {
+    padding: 30px;
+    overflow-y: auto;
+  }
+  
+  .results {
+    margin-bottom: 30px;
+  }
+  
+  /* Bus Details */
+  .bus-details {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 25px;
+    box-shadow: var(--shadow);
+  }
+  
+  .bus-details h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .detail-item {
+    display: flex;
+    margin-bottom: 15px;
+  }
+  
+  .detail-label {
+    width: 120px;
+    font-weight: 600;
+    color: #555;
+  }
+  
+  .detail-value {
+    flex: 1;
+  }
+  
+  .bus-route {
+    margin: 25px 0;
+    position: relative;
+  }
+  
+  .route-line {
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 0 30px;
+    position: relative;
+  }
+  
+  .route-stop {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .stop-point {
+    width: 16px;
+    height: 16px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  .stop-info h4 {
+    color: var(--primary-color);
+    margin-bottom: 3px;
+  }
+  
+  .stop-info p {
+    color: #666;
+    font-size: 14px;
+  }
+  
+  /* Booking Button */
+  .book-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .book-btn:hover {
+    background-color: #e55a2a;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .main-container {
+      grid-template-columns: 220px 250px 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .main-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .primary-sidebar, .secondary-sidebar {
+      position: fixed;
+      left: -100%;
+      height: 100vh;
+      transition: left 0.3s ease;
+      z-index: 100;
+    }
+    
+    .primary-sidebar.open {
+      left: 0;
+      width: 220px;
+    }
+    
+    .secondary-sidebar.open {
+      left: 0;
+      width: 280px;
+    }
+    
+    .toggle-menu {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      z-index: 101;
+      background-color: var(--primary-color);
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    .main-content {
+      padding: 70px 20px 20px;
+    }
+  }
