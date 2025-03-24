@@ -53,31 +53,6 @@ Example:
 4. Click "Search" to find available buses.
 5. Click on a bus to view its full route on the map.
 
-## Directory Structure
-
-wizmybus/
-│── Wizmybus/
-│   │── __pycache__/
-│   │── asgi.py
-│   │── settings.py
-│   │── urls.py
-│   │── wsgi.py
-│── main/
-│   │── __pycache__/
-│   │── migrations/
-│   │── static/
-│   │── templates/
-│   │── __init__.py
-│   │── admin.py
-│   │── apps.py
-│   │── bus.json
-│   │── models.py
-│   │── tests.py
-│   │── urls.py
-│   │── views.py
-│── db.sqlite3
-│── manage.py
-
 ## Built With
 
 - **Django** - Backend framework
