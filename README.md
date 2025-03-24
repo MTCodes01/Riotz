@@ -77,15 +77,13 @@ wizmybus/
 │   │── views.py
 │── db.sqlite3
 │── manage.py
-│── LICENSE
-│── README
 
 ## Built With
 
 - **Django** - Backend framework
 - **HTML, CSS, JavaScript** - Frontend
 - **OpenStreetMap & OpenRouteService** - Mapping & Routing
-- **SQLite** - Database
+- **json** - Database
 
 ## Contributing
 
